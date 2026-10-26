@@ -1,0 +1,15 @@
+[project]
+name = "rvp"
+version = "0.1.0"
+description = "Remote vulnerability assessment platform - schema and authorisation gate"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Explicit is better: every test here needs a real Postgres, and a surprising
+# import path is the usual reason someone's first run fails.
+addopts = "-ra --strict-markers"
+filterwarnings = ["error::DeprecationWarning:app.*"]

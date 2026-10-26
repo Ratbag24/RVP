@@ -1,0 +1,7 @@
+# Deliberately short. Anything added here should earn its place.
+SQLAlchemy~=2.0.0
+psycopg[binary]~=3.2        # psycopg 3; the driver SQLAlchemy 2.0 prefers for Postgres
+alembic~=1.13
+argon2-cffi~=25.1           # password hashing for user_account.password_hash
+fastapi~=0.115              # the web layer arrives in step 2; see README for the wiring
+pytest~=8.0
